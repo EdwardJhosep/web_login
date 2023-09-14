@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\MI_WEB\\MI_WEB.csproj",
+      "projectUniqueName": "C:\\Users\\Alumno\\Downloads\\web_login-main\\MI_WEB.csproj",
       "projectName": "MI_WEB",
-      "projectPath": "C:\\Users\\Alumno\\Desktop\\MI_WEB\\MI_WEB.csproj",
+      "projectPath": "C:\\Users\\Alumno\\Downloads\\web_login-main\\MI_WEB.csproj",
       "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\Desktop\\MI_WEB\\obj\\",
+      "outputPath": "C:\\Users\\Alumno\\Downloads\\web_login-main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
