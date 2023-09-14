@@ -1,22 +1,33 @@
-﻿<!DOCTYPE html>
+﻿@page
+@model registerModel
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>Registro</title>
 </head>
 <body>
     <h2>Registrarse</h2>
-    <form action="procesar_registro.php" method="post">
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required><br>
+    <form method="post">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" asp-for="FirstName" required><br>
+        </div>
 
-        <label>Apellido:</label>
-        <input type="text" name="apellido" required><br>
+        <div>
+            <label>Apellido:</label>
+            <input type="text" asp-for="LastName" required><br>
+        </div>
 
-        <label>Correo Electrónico:</label>
-        <input type="email" name="correo" required><br>
+        <div>
+            <label>Correo Electrónico:</label>
+            <input type="email" asp-for="Email" required><br>
+        </div>
 
-        <label>Contraseña:</label>
-        <input type="password" name="contraseña" required><br>
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" asp-for="Password" required><br>
+        </div>
 
         <input type="submit" value="Registrarse">
     </form>

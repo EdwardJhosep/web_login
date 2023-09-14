@@ -3,11 +3,11 @@
 <head>
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="~/css/site.css">
-
 </head>
 <body>
     <h2>Iniciar Sesión</h2>
-    <form action="login_procesar.php" method="post">
+    <form action="/Account/Login" method="post">
+      
         <label>Correo Electrónico:</label>
         <input type="email" name="correo" required><br>
 
@@ -17,6 +17,6 @@
         <input type="submit" value="Iniciar Sesión">
     </form>
 
-    <p>¿No tienes una cuenta? <a href="~/Home/register">Registrarse</a></p>
+    <p>¿No tienes una cuenta? <a href="/Home/register">Registrarse</a></p> 
 </body>
 </html>
