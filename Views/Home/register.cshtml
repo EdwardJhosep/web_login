@@ -1,1 +1,24 @@
-﻿
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+</head>
+<body>
+    <h2>Registrarse</h2>
+    <form action="procesar_registro.php" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required><br>
+
+        <label>Apellido:</label>
+        <input type="text" name="apellido" required><br>
+
+        <label>Correo Electrónico:</label>
+        <input type="email" name="correo" required><br>
+
+        <label>Contraseña:</label>
+        <input type="password" name="contraseña" required><br>
+
+        <input type="submit" value="Registrarse">
+    </form>
+</body>
+</html>
