@@ -1,0 +1,104 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e6f7ff; /* Cambiar el color de fondo */
+            font-family: Arial, sans-serif; /* Cambiar la fuente de texto */
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px; /* Agregar espacio interno en las tarjetas */
+        }
+
+        .card-header {
+            background-color: #ff6600; /* Cambiar el color del encabezado */
+            color: #fff;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            font-size: 28px;
+            padding: 1rem 0;
+            margin-bottom: 20px; /* Agregar espacio inferior al encabezado */
+        }
+
+        .form-control {
+            border: 2px solid #99ccff; /* Cambiar el color del borde de los campos de entrada */
+            border-radius: 12px;
+            padding: 12px; /* Agregar espacio interno en los campos de entrada */
+        }
+
+        .btn-primary {
+            background-color: #ff6600; /* Cambiar el color del botón */
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            color: #fff; /* Cambiar el color del texto del botón */
+            cursor: pointer; /* Cambiar el cursor al pasar el ratón por encima */
+        }
+
+            .btn-primary:hover {
+                background-color: #cc5500; /* Cambiar el color del botón al pasar el ratón por encima */
+            }
+
+        .alert {
+            background-color: #ffeecc; /* Cambiar el color de fondo de las alertas */
+            border: 1px solid #ffcc66; /* Cambiar el color del borde de las alertas */
+            border-radius: 12px;
+            padding: 12px; /* Agregar espacio interno en las alertas */
+            margin-bottom: 20px; /* Agregar espacio inferior a las alertas */
+            color: #cc5500; /* Cambiar el color del texto de las alertas */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Iniciar Sesión
+                    </div>
+                    <div class="card-body">
+                        <form asp-controller="Inicio" asp-action="IniciarSesion" method="post">
+                            <div class="mb-3">
+                                <input class="form-control" type="text" placeholder="Correo" required name="correo">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="password" placeholder="Contraseña" required name="clave">
+                            </div>
+                            <div class="d-grid mb-3">
+                                <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
+                            </div>
+                            @if (ViewData["Mensaje"] != null)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewData["Mensaje"]
+                                </div>
+                            }
+                            <p class="text-center">¿No tienes una cuenta? <a href="@Url.Action("Registrarse","Inicio")">Regístrate</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
